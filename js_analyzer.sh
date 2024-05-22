@@ -2,15 +2,18 @@
 
 # Check if the input file argument is provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 <input_file>"
+    echo "Usage: $0 <input_file> [output_file]"
     exit 1
 fi
 
 # Input file containing JS URLs
 input_file="$1"
 
-# Output file to store the results
-output_file="output_results.txt"
+# Output file to store the results, default to "output_results.txt" if not provided
+output_file="${2:-output_results.txt}"
+
+# Create the output file
+> "$output_file"
 
 # Check if /usr/local/bin/extract.sh exists and is executable
 extract_sh="/usr/local/bin/extract.sh"
