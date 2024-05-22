@@ -10,4 +10,6 @@ This script processes a list of JavaScript URLs from an input file, fetches the 
 ## Prerequisites
 
 - Bash
+- Download this file and give all permission https://github.com/jobertabma/relative-url-extractor/blob/master/extract.rb
+- Put all the files in the /usr/local/bin folder.
 
